@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Shorts Cleaner – 유튜브 쇼츠 제거기",
+  "version": "1.0.0",
+  "description": "YouTube와 m.YouTube에서 쇼츠(Shorts) UI와 링크를 전반적으로 숨기고 제거합니다.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "css": [
+        "hide-shorts.css"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

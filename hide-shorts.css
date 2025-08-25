@@ -1,0 +1,27 @@
+/* Shorts Cleaner — CSS layer (fast, before layout) */
+/* 주요 쇼츠 컨테이너 */
+ytd-reel-shelf-renderer,
+ytd-reel-video-renderer,
+ytd-reel-player-overlay-renderer,
+ytd-shorts,
+/* 홈/검색 섹션 내에서의 쇼츠 */
+ytd-item-section-renderer ytd-reel-shelf-renderer,
+/* 모바일 프론트엔드 */
+ytm-shorts-lockup-view-model,
+ytm-shorts-lockup-view-model-v2 {
+  display: none !important;
+}
+
+/* 사이드바/가이드의 Shorts 메뉴 */
+ytd-mini-guide-entry-renderer[aria-label*="Shorts"],
+a[title*="Shorts"],
+a[aria-label*="Shorts"] {
+  display: none !important;
+}
+
+/* Shorts로 연결되는 전용 링크(보수적) */
+a[href^="/shorts"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
